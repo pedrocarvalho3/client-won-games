@@ -39,7 +39,7 @@ const wrapperModifiers = {
     color: ${theme.colors.primary};
 
     &:hover {
-      color: ${darken(0.1, theme.colors.primary)};
+      color: ${darken(0.2, theme.colors.primary)};
     }
   `
 }
