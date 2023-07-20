@@ -8,6 +8,7 @@ import Logo from 'components/Logo'
 import * as S from './styles'
 import Button from 'components/Button'
 import MediaMatch from 'components/MediaMatch'
+import Link from 'next/link'
 
 export type MenuProps = {
   username?: string
@@ -40,7 +41,11 @@ const Menu = ({ username }: MenuProps) => {
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconWrapper>
         <MediaMatch greaterThan="medium">
-          {!username && <Button>Sign in</Button>}
+          {!username && (
+            <Link href="/sign-in" passHref>
+              <Button as="a">Sign in</Button>
+            </Link>
+          )}
         </MediaMatch>
       </S.MenuGroup>
 
@@ -60,13 +65,15 @@ const Menu = ({ username }: MenuProps) => {
 
         {!username && (
           <S.RegisterBox>
-            <Button fullWidth size="large">
-              Log in now
-            </Button>
+            <Link href="/sign-in" passHref>
+              <Button fullWidth size="large" as="a">
+                Sign in
+              </Button>
+            </Link>
             <span>or</span>
-            <S.CreateAccount href="#" title="Sign Up">
-              Sign Up
-            </S.CreateAccount>
+            <Link href="/sign-up" passHref>
+              <S.CreateAccount title="Sign Up">Sign Up</S.CreateAccount>
+            </Link>
           </S.RegisterBox>
         )}
       </S.MenuFull>

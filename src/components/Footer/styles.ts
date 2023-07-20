@@ -31,6 +31,9 @@ export const Column = styled.div`
       text-decoration: none;
       margin-bottom: ${theme.spacings.xxsmall};
       font-size: ${theme.font.sizes.small};
+
+      width: fit-content;
+      height: fit-content;
     }
 
     a:hover {
