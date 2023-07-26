@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Email, Lock } from 'styled-icons/material-outlined'
+
+import { Email, Lock } from '@styled-icons/material-outlined'
 
 import { FormLink, FormWrapper } from 'components/Form'
 import Button from 'components/Button'
