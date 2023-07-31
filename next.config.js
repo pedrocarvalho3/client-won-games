@@ -8,6 +8,9 @@ module.exports = withPWA({
     // Enables the styled-components SWC transform
     styledComponents: true
   },
+  images: {
+    domains: ['res.cloudinary.com', 'source.unsplash.com', 'localhost']
+  },
   pwa: {
     dest: 'public',
     disable: !isProd

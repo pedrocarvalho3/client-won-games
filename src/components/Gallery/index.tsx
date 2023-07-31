@@ -3,11 +3,11 @@ import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/Arrow
 import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos'
 import { Close } from '@styled-icons/material-outlined/Close'
 import SlickSlider from 'react-slick'
-import Image from 'next/image'
 
 import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
+import Image from 'next/image'
 
 const commonSettings: SliderSettings = {
   infinite: false,
