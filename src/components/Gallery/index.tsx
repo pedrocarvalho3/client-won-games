@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from 'react'
 import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/ArrowBackIos'
 import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos'
@@ -7,7 +8,6 @@ import SlickSlider from 'react-slick'
 import Slider, { SliderSettings } from 'components/Slider'
 
 import * as S from './styles'
-import Image from 'next/image'
 
 const commonSettings: SliderSettings = {
   infinite: false,
@@ -79,8 +79,7 @@ const Gallery = ({ items }: GalleryProps) => {
     <S.Wrapper>
       <Slider ref={slider} settings={settings}>
         {items.map((item, index) => (
-          <Image
-            layout="fill"
+          <img
             role="button"
             key={`thumb-${index}`}
             src={item.src}
@@ -105,12 +104,7 @@ const Gallery = ({ items }: GalleryProps) => {
         <S.Content>
           <Slider ref={slider} settings={modalSettings}>
             {items.map((item, index) => (
-              <Image
-                layout="fill"
-                key={`gallery-${index}`}
-                src={item.src}
-                alt={item.label}
-              />
+              <img key={`gallery-${index}`} src={item.src} alt={item.label} />
             ))}
           </Slider>
         </S.Content>

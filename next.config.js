@@ -9,7 +9,7 @@ module.exports = withPWA({
     styledComponents: true
   },
   images: {
-    domains: ['res.cloudinary.com', 'source.unsplash.com', 'localhost']
+    domains: ['res.cloudinary.com', 'source.unsplash.com']
   },
   pwa: {
     dest: 'public',
