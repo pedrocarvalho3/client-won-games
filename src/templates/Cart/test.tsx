@@ -12,6 +12,7 @@ const props = {
   items: itemsMock,
   total: 'R$ 430,00',
   cards: cardsMock,
+  recommendedTitle: 'You may like these games',
   recommendedGames: gamesMock,
   recommendedHighlight: highlightMock
 }
